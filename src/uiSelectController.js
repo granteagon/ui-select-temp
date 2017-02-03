@@ -289,7 +289,7 @@ uis.controller('uiSelectCtrl',
   /**
    * Typeahead mode: lets the user refresh the collection using his own function.
    *
-   * See Expose $select.search for external / remote filtering https://github.com/angular-ui/ui-select/pull/31
+   * See Expose $select.search for external / remote filtering https://github.com/granteagon/ui-select-temp/pull/31
    */
   ctrl.refresh = function(refreshAttr) {
     if (refreshAttr !== undefined) {

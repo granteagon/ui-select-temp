@@ -41,6 +41,7 @@ module.exports = function(config) {
     // - PhantomJS
     // - IE (only Windows)
     browsers: [process.env.TRAVIS ? 'Firefox' : 'Chrome'],
+    reporters: ['spec'],
 
     // Continuous Integration mode
     // if true, it capture browsers, run tests and exit

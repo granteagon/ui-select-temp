@@ -2,11 +2,11 @@
 
 AngularJS-native version of [Select2](http://ivaynberg.github.io/select2/) and [Selectize](http://brianreavis.github.io/selectize.js/). [http://angular-ui.github.io/ui-select/](http://angular-ui.github.io/ui-select/)
 
-[Getting Started](https://github.com/angular-ui/ui-select/wiki/Getting-Started) 
+[Getting Started](https://github.com/granteagon/ui-select-temp/wiki/Getting-Started) 
 
 - [Examples](http://angular-ui.github.io/ui-select/#examples)
 - [Examples Source](./docs/examples)
-- [Documentation](https://github.com/angular-ui/ui-select/wiki)
+- [Documentation](https://github.com/granteagon/ui-select-temp/wiki)
 
 ## Latest Changes
 
@@ -20,7 +20,7 @@ AngularJS-native version of [Select2](http://ivaynberg.github.io/select2/) and [
 - No jQuery required (except for old browsers)
 - Small code base: 4.57KB min/gzipped vs 20KB for select2
 
-For the roadmap, check [issue #3](https://github.com/angular-ui/ui-select/issues/3) and the [Wiki page](https://github.com/angular-ui/ui-select/wiki/Roadmap).
+For the roadmap, check [issue #3](https://github.com/granteagon/ui-select-temp/issues/3) and the [Wiki page](https://github.com/granteagon/ui-select-temp/wiki/Roadmap).
 
 ## Installation Methods
 

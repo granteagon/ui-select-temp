@@ -5,7 +5,7 @@
  * See https://github.com/angular/angular.js/blob/v1.2.15/src/ng/directive/ngRepeat.js#L211
  *
  * Original discussion about parsing "repeat" attribute instead of fully relying on ng-repeat:
- * https://github.com/angular-ui/ui-select/commit/5dd63ad#commitcomment-5504697
+ * https://github.com/granteagon/ui-select-temp/commit/5dd63ad#commitcomment-5504697
  */
 
 uis.service('uisRepeatParser', ['uiSelectMinErr','$parse', function(uiSelectMinErr, $parse) {
