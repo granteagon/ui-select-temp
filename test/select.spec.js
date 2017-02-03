@@ -171,6 +171,7 @@ describe('ui-select tests', function() {
       if (attrs.backspaceReset !== undefined) { attrsHtml += ' backspace-reset="' + attrs.backspaceReset + '"';}
       if (attrs.uiDisableChoice !== undefined) { choicesAttrsHtml += ' ui-disable-choice="' + attrs.uiDisableChoice + '"';}
       if (attrs.removeSelected !== undefined) { attrsHtml += ' remove-selected="' + attrs.removeSelected + '"';}
+      if (attrs.firstItemActive !== undefined) { choicesAttrsHtml += ' first-item-active="' + attrs.firstItemActive + '"'; }
     }
 
     return compileTemplate(
@@ -1851,6 +1852,7 @@ describe('ui-select tests', function() {
             if (attrs.limit !== undefined) { attrsHtml += ' limit="' + attrs.limit + '"'; }
             if (attrs.onSelect !== undefined) { attrsHtml += ' on-select="' + attrs.onSelect + '"'; }
             if (attrs.removeSelected !== undefined) { attrsHtml += ' remove-selected="' + attrs.removeSelected + '"';}
+            if (attrs.firstItemActive !== undefined) { choicesAttrsHtml += ' first-item-active="' + attrs.firstItemActive + '"'; }
         }
 
         return compileTemplate(
@@ -2223,6 +2225,26 @@ describe('ui-select tests', function() {
         expect(jQuery.Event.prototype.preventDefault).toHaveBeenCalled();
         expect(jQuery.Event.prototype.stopPropagation).toHaveBeenCalled();
 
+    });
+
+    it('should close choices on ENTER when firstItemActive set to false', function() {
+
+        scope.selection.selectedMultiple = [scope.people[5]]; //Samantha
+        var el = createUiSelectMultiple({firstItemActive: false});
+        var searchInput = el.find('.ui-select-search');
+
+        triggerKeydown(searchInput, Key.Enter);
+        expect(el.scope().$select.open).toEqual(false);
+    });
+
+    it('should close choices on TAB when firstItemActive set to false', function() {
+
+        scope.selection.selectedMultiple = [scope.people[5]]; //Samantha
+        var el = createUiSelectMultiple({firstItemActive: false});
+        var searchInput = el.find('.ui-select-search');
+
+        triggerKeydown(searchInput, Key.Tab);
+        expect(el.scope().$select.open).toEqual(false);
     });
 
     it('should increase $select.activeIndex when pressing DOWN key from dropdown', function() {
@@ -3231,12 +3253,12 @@ describe('ui-select tests', function() {
       expect(el.scope().$select.spinnerClass).toBe('randomclass');
     });
   });
-  
+
   describe('With refresh on active', function(){
     it('should refresh when is activated', function(){
        scope.fetchFromServer = function(){};
        var el = createUiSelect({refresh:"fetchFromServer($select.search)",refreshDelay:0});
-       spyOn(scope, 'fetchFromServer'); 
+       spyOn(scope, 'fetchFromServer');
        expect(el.scope().$select.open).toEqual(false);
        el.scope().$select.activate();
        $timeout.flush();
@@ -3248,7 +3270,7 @@ describe('ui-select tests', function() {
      it('should refresh when open is set to true', function(){
        scope.fetchFromServer = function(){};
        var el = createUiSelect({refresh:"fetchFromServer($select.search)",refreshDelay:0});
-       spyOn(scope, 'fetchFromServer'); 
+       spyOn(scope, 'fetchFromServer');
        expect(el.scope().$select.open).toEqual(false);
        openDropdown(el);
        $timeout.flush();
