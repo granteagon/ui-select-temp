@@ -2,7 +2,8 @@
   "name": "angular-ui-select-temp",
   "homepage": "https://github.com/granteagon/ui-select-temp",
   "authors": [
-    "AngularUI"
+    "AngularUI",
+    "Grant Eagon"
   ],
   "description": "AngularJS ui-select temporary patch",
   "main": [
