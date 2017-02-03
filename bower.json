@@ -1,10 +1,10 @@
 {
-  "name": "angular-ui-select",
+  "name": "angular-ui-select-temp",
   "homepage": "https://github.com/granteagon/ui-select-temp",
   "authors": [
     "AngularUI"
   ],
-  "description": "AngularJS ui-select",
+  "description": "AngularJS ui-select temporary patch",
   "main": [
     "dist/select.js",
     "dist/select.css"
