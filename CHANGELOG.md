@@ -1,3 +1,9 @@
+<a name="0.19.7"></a>
+## [0.19.7](https://github.com/angular-ui/ui-select/compare/0.19.7...v0.19.7) (2017-02-03)
+
+
+
+
 <a name="0.19.5"></a>
 ## [0.19.5](https://github.com/granteagon/ui-select-temp/compare/v0.19.5...v0.19.5) (2016-10-24)
 
